@@ -7,35 +7,30 @@ $(document).ready(function(){
         $(".btn-pepperonni").toggleClass("active");
         $(".pep").toggleClass("hidden");
         $(".item-price:eq(0)").toggleClass("display");
-        getTotal();
     });
 
     $(".btn-mushrooms").click(function(){
         $(".btn-mushrooms").toggleClass("active");
         $(".mushroom").toggleClass("hidden");
         $(".item-price:eq(1)").toggleClass("display");
-        getTotal();
     });
 
      $(".btn-green-peppers").click(function(){
         $(".btn-green-peppers").toggleClass("active");
         $(".green-pepper").toggleClass("hidden");
         $(".item-price:eq(2)").toggleClass("display");
-        getTotal();
     });
 
     $(".btn-sauce").click(function(){
         $(".btn-sauce").toggleClass("active");
         $(".sauce").toggleClass("sauce-white");
         $(".item-price:eq(3)").toggleClass("display");
-        getTotal();
     });
 
     $(".btn-crust").click(function(){
         $(".btn-crust").toggleClass("active");
         $(".crust").toggleClass("crust-gluten-free");
         $(".item-price:eq(4)").toggleClass("display");
-        getTotal();
     });
 
     function getTotal(){
@@ -45,5 +40,9 @@ $(document).ready(function(){
             return total;
         });
         return  $("#total").html('$ ' + total);        
-    }    
+    }
+
+    $(".btn").click(function(){
+        getTotal();
+    });
 });
